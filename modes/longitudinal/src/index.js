@@ -68,7 +68,7 @@ const extensionDependencies = {
   '@ohif/extension-dicom-video': '^3.0.1',
 };
 
-function modeFactory() {
+function modeFactory({ modeConfiguration }) {
   let _activatePanelTriggersSubscriptions = [];
   return {
     // TODO: We're using this as a route segment
@@ -249,6 +249,7 @@ function modeFactory() {
       dicomRt.sopClassHandler,
     ],
     hotkeys: [...hotkeys.defaults.hotkeyBindings],
+    ...modeConfiguration,
   };
 }
 
