@@ -69,6 +69,10 @@ module.exports = (env, argv) => {
         // Hoisted Yarn Workspace Modules
         path.resolve(__dirname, '../../../node_modules'),
         SRC_DIR,
+        path.resolve(
+          __dirname,
+          '/home/user/code/xzyr/healthcare/pacs_dicom/dev-ohif-vewer/xziry-extensions/findings/node_modules'
+        ),
       ],
     },
     plugins: [

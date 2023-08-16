@@ -3,6 +3,7 @@ import CineDialog from './CineDialog.json';
 import Common from './Common.json';
 import Header from './Header.json';
 import UserPreferencesModal from './UserPreferencesModal.json';
+import Report from './Report.json';
 
 export default {
   fr: {
@@ -11,5 +12,6 @@ export default {
     Common,
     Header,
     UserPreferencesModal,
+    Report,
   },
 };

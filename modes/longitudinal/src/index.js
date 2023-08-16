@@ -21,6 +21,11 @@ const tracked = {
     '@ohif/extension-measurement-tracking.viewportModule.cornerstone-tracked',
 };
 
+const report = {
+  findings:
+    'findings.panelModule.findings',
+};
+
 const dicomsr = {
   sopClassHandler:
     '@ohif/extension-cornerstone-dicom-sr.sopClassHandlerModule.dicom-sr',
@@ -176,7 +181,7 @@ function modeFactory() {
       series: [],
     },
 
-    isValidMode: function({ modalities }) {
+    isValidMode: function ({ modalities }) {
       const modalities_list = modalities.split('\\');
 
       // Exclude non-image modalities
@@ -195,8 +200,8 @@ function modeFactory() {
             id: ohif.layout,
             props: {
               leftPanels: [tracked.thumbnailList],
-              rightPanels: [dicomSeg.panel, tracked.measurements],
-              rightPanelDefaultClosed: true,
+              rightPanels: [dicomSeg.panel, tracked.measurements, report.findings],
+              rightPanelDefaultClosed: false,
               viewports: [
                 {
                   namespace: tracked.viewport,
