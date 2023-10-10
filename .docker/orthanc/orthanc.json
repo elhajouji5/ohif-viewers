@@ -1,0 +1,28 @@
+{
+  "Name": "XZIRY",
+  "StorageDirectory": "/var/lib/orthanc/db",
+  "IndexDirectory": "/var/lib/orthanc/db",
+  "HttpCompressionEnabled": true,
+  "StorageCompression": true,
+  "Plugins": [
+    "/usr/share/orthanc/plugins",
+    "/usr/local/share/orthanc/plugins"
+  ],
+  "DicomModalities": {},
+  "DicomAet": "XZIRY",
+  "DicomCheckCalledAet": true,
+  "DicomPort": 4242,
+  "AuthenticationEnabled": true,
+  "RemoteAccessAllowed": true,
+  "RegisteredUsers": {
+    "orthanc": "orthanc"
+  },
+  "PostgreSQL": {
+    "EnableIndex": true,
+    "EnableStorage": false,
+    "Host": "orthanc-index",
+    "Database": "orthanc",
+    "Password": "orthancp",
+    "Username": "orthancu"
+  }
+}
